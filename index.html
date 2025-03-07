@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positision: absolute and z-index</title>
+</head>
+<body>
+  <div class="page-1">
+    <img id="hat" src="images/1.png" alt="">
+    <img id="astronaut-helmet" src="images/2.png" alt="">
+    <img id="bag" src="images/3.png" alt="">
+    <img id="cassette-tape" src="images/4.png" alt="">
+    <p id="page1-text">When you apply <mark id="page1-mark">position: absolute</mark>, the elements are going to: <br> 1. Be dependent on the webpage (body) or the parent container (if this one has position: relative applied); <br> 2. Be in different layers which means that the images will be on top of each other in the order that it is organized in the HTML file, being the first image behind the second, and the second behind the third and the third behind the fourth. <br> 3. If the position isn't declared, the images will be on top of each other on the top left corner.</p>
+  </div>
+
+  <div class="page-2">
+    <img id="hat" src="images/1.png" alt="">
+    <img id="astronaut-helmet" src="images/2.png" alt="">
+    <img id="bag" src="images/3.png" alt="">
+    <img id="cassette-tape" src="images/4.png" alt="">
+    <p id="page2-text">Position: absolute has a huge advantage placing the <mark id="page2-mark">specific position</mark> of an image or element on the webpage or container. The properties top, right, bottom and left are used for placing an element. These images have the following coordinates: <br> Hat - top: 20px; left: 650px; <br>
+    Astronaut helmet - top: 20px; right: 100px; <br> Bag - bottom: 20px; left: 650px; <br> Cassette tape - bottom: 20px; right: 100px;
+    </p>
+  </div>
+  </div>
+
+  <div class="page-3">
+    <img id="hat" src="images/1.png" alt="">
+    <img id="astronaut-helmet" src="images/2.png" alt="">
+    <img id="bag" src="images/3.png" alt="">
+    <img id="cassette-tape" src="images/4.png" alt="">
+    <p id="page3-text1">Position: absolute makes the elements be <mark id="page3-mark">organized by layers</mark> being the fisrt element in the HTML file on the back followed by the second, third and so on. The last element/image is in the front of the others.
+    </p>
+    <p id="page3-text2">It is possible to change which image is in front of the other by changing the order of the elements in HTML file.
+    </p>
+  </div>
+
+  <div class="page-4">
+    <img id="hat" src="images/1.png" alt="">
+    <img id="astronaut-helmet" src="images/2.png" alt="">
+    <img id="bag" src="images/3.png" alt="">
+    <img id="cassette-tape" src="images/4.png" alt="">
+    <p id="page4-text1">Another way to chage the order of the layers is to use the property <mark id="page4-mark0">z-index</mark>. Z-index can have a value from 0 to 99. It means that a higher value will be in front of the page and a lower in the back of it.</p>
+    <p id="page4-text2">
+    #hat { <br>
+    top: 150px; <br>
+    left: 400px; <br>
+    } <br>
+
+    #astronaut-helmet { <br>
+    top: 170px; <br>
+    left: 500px; <br>
+    <mark id="page4-mark1">z-index: 1;</mark> <br>
+    } <br>
+
+    #bag { <br>
+    top: 190px; <br>
+    left: 600px; <br>
+    } <br>
+
+    #cassette-tape { <br>
+    top: 210px; <br>
+    left: 750px; <br>
+    }
+    </p>
+
+    <p id="page4-text3">The astronaut helmet is in the exactly same position as the previous page. What makes it to go to the front is the z-index:1;</p>
+  </div>
+</body>
+</html>
